@@ -11,7 +11,6 @@ namespace ChangeNumMod3
                 string str = i % 3 == 0 ? "3*" + (i / 3).ToString() : i.ToString();
                 Console.Write(str + " ");
             }
-
             Console.ReadKey();
         }
     }
