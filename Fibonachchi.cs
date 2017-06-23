@@ -8,10 +8,9 @@ namespace Fibonachchi
         {
             try
             {
-                bool isfibonacci = false;
-
                 Console.WriteLine("Enter number");
                 int number = int.Parse(Console.ReadLine());
+                bool isfibonacci = false;
                 if ((number == 0) || (number == 1))
                     Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 else
