@@ -10,20 +10,20 @@ namespace Fibonachchi
             {
                 Console.WriteLine("Enter number");
                 int number = int.Parse(Console.ReadLine());
-                bool f = false;
+                bool isfibonacci = false;
                 if (number == 0 || number == 1)
                     Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 else
                 {
-                    int[] fib = new int[] { 0, 1, 1 };
-                    while (fib[2] < number)
+                    int[] fibonaccinumber = new int[] { 0, 1, 1 };
+                    while (fibonaccinumber[2] < number)
                     {
-                        fib[0] = fib[1];
-                        fib[1] = fib[2];
-                        fib[2] = fib[0] + fib[1];
-                        f = (fib[2] == number);
+                        fibonaccinumber[0] = fibonaccinumber[1];
+                        fibonaccinumber[1] = fibonaccinumber[2];
+                        fibonaccinumber[2] = fibonaccinumber[0] + fibonaccinumber[1];
+                        isfibonacci = (fibonaccinumber[2] == number);
                     }
-                    if (f)
+                    if (isfibonacci)
                         Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                     else
                         Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
