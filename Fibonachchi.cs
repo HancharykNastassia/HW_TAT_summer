@@ -10,23 +10,23 @@ namespace Fibonachchi
             {
                 Console.WriteLine("Enter number");
                 int number = int.Parse(Console.ReadLine());
-                bool isfibonacci = false;
+                bool isFibonacci = false;
                 if ((number == 0) || (number == 1))
                 {
                     Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 }
                 else
                 {
-                    int[] fibonaccinumber = new int[] { 0, 1, 1 };
+                    int[] fibonacciNumber = new int[] { 0, 1, 1 };
 
-                    while (fibonaccinumber[2] < number)
+                    while (fibonacciNumber[2] < number)
                     {
-                        fibonaccinumber[0] = fibonaccinumber[1];
-                        fibonaccinumber[1] = fibonaccinumber[2];
-                        fibonaccinumber[2] = fibonaccinumber[0] + fibonaccinumber[1];
-                        isfibonacci = (fibonaccinumber[2] == number);
+                        fibonacciNumber[0] = fibonacciNumber[1];
+                        fibonacciNumber[1] = fibonacciNumber[2];
+                        fibonacciNumber[2] = fibonacciNumber[0] + fibonacciNumber[1];
+                        isFibonacci = (fibonacciNumber[2] == number);
                     }
-                    if (isfibonacci)
+                    if (isFibonacci)
                     {
                         Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                     }
@@ -39,6 +39,7 @@ namespace Fibonachchi
             catch (System.FormatException ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine("Enter a number please.")
             }
             Console.WriteLine("Press any key for exit");
             Console.ReadKey();
