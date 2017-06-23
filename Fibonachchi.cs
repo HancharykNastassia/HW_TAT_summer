@@ -8,14 +8,16 @@ namespace Fibonachchi
         {
             try
             {
+                bool isfibonacci = false;
+
                 Console.WriteLine("Enter number");
                 int number = int.Parse(Console.ReadLine());
-                bool isfibonacci = false;
-                if (number == 0 || number == 1)
+                if ((number == 0) || (number == 1))
                     Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 else
                 {
                     int[] fibonaccinumber = new int[] { 0, 1, 1 };
+
                     while (fibonaccinumber[2] < number)
                     {
                         fibonaccinumber[0] = fibonaccinumber[1];
