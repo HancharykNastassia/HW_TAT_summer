@@ -12,7 +12,7 @@ namespace Fibonachchi
                 int number = int.Parse(Console.ReadLine());
                 bool f = false;
                 if (number == 0 || number == 1)
-                Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                    Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 else
                 {
                     int[] fib = new int[] { 0, 1, 1 };
@@ -23,8 +23,10 @@ namespace Fibonachchi
                         fib[2] = fib[0] + fib[1];
                         f = (fib[2] == number);
                     }
-                    if (f) Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
-                    else Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                    if (f)
+                        Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                    else
+                        Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 }                
             }
             catch (System.FormatException ex)
