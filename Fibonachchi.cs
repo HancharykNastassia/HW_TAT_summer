@@ -12,7 +12,9 @@ namespace Fibonachchi
                 int number = int.Parse(Console.ReadLine());
                 bool isfibonacci = false;
                 if ((number == 0) || (number == 1))
+                {
                     Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                }
                 else
                 {
                     int[] fibonaccinumber = new int[] { 0, 1, 1 };
@@ -25,9 +27,13 @@ namespace Fibonachchi
                         isfibonacci = (fibonaccinumber[2] == number);
                     }
                     if (isfibonacci)
+                    {
                         Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                    }
                     else
+                    {
                         Console.WriteLine(number.ToString() + " is not in the Fibonacci sequence");
+                    }
                 }                
             }
             catch (System.FormatException ex)
