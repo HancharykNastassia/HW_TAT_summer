@@ -29,7 +29,7 @@ namespace Fibonachchi
             }
             catch (System.FormatException ex)
             {
-                Console.WriteLine("Неверный формат");
+                Console.WriteLine("Ошибка: " + ex.Message);
             }
             Console.ReadKey();
         }
