@@ -28,7 +28,7 @@ namespace Fibonachchi
                     if (isfibonacci)
                         Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                     else
-                        Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                        Console.WriteLine(number.ToString() + " is not in the Fibonacci sequence");
                 }                
             }
             catch (System.FormatException ex)
