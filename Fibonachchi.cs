@@ -8,11 +8,11 @@ namespace Fibonachchi
         {
             try
             {
-                Console.WriteLine("Введите число");
+                Console.WriteLine("Enter number");
                 int number = int.Parse(Console.ReadLine());
                 bool f = false;
                 if (number == 0 || number == 1)
-                Console.WriteLine(number.ToString() + " - число из последовательности Фибоначчи");
+                Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 else
                 {
                     int[] fib = new int[] { 0, 1, 1 };
@@ -23,15 +23,15 @@ namespace Fibonachchi
                         fib[2] = fib[0] + fib[1];
                         f = (fib[2] == number);
                     }
-                    if (f) Console.WriteLine(number.ToString() + " - число из последовательности Фибоначчи");
-                    else Console.WriteLine(number.ToString() + " - число не из последовательности Фибоначчи");
+                    if (f) Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
+                    else Console.WriteLine(number.ToString() + " is in the Fibonacci sequence");
                 }                
             }
             catch (System.FormatException ex)
             {
-                Console.WriteLine("Ошибка: " + ex.Message);
+                Console.WriteLine("Error: " + ex.Message);
             }
-            Console.WriteLine("Для выхода нажмите любую клавишу");
+            Console.WriteLine("Press any key for exit");
             Console.ReadKey();
         }
     }
