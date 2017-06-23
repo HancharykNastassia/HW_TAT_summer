@@ -31,6 +31,7 @@ namespace Fibonachchi
             {
                 Console.WriteLine("Ошибка: " + ex.Message);
             }
+            Console.WriteLine("Для выхода нажмите любую клавишу");
             Console.ReadKey();
         }
     }
