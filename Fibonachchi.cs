@@ -6,17 +6,19 @@ namespace Fibonachchi
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter number");
-            int number = 0;
-            try
+            int number = -1;
+            while (number < 0)
             {
-                number = int.Parse(Console.ReadLine());
-            }
-            catch (System.FormatException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-                Console.WriteLine("Enter a number please.");
-                number = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter not negative number");
+                try
+                {
+                    number = int.Parse(Console.ReadLine());
+                }
+                catch (System.FormatException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                    number = -1;
+                }
             }
             bool isFibonacci = false;
             if ((number == 0) || (number == 1))
