@@ -28,7 +28,6 @@ namespace Fibonachchi
             else
             {
                 int[] fibonacciNumber = new int[] { 0, 1, 1 };
-
                 while (fibonacciNumber[2] < number)
                 {
                     fibonacciNumber[0] = fibonacciNumber[1];
