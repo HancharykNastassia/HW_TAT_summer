@@ -19,6 +19,11 @@ namespace Fibonachchi
                     Console.WriteLine("Error: " + ex.Message);
                     number = -1;
                 }
+                catch (System.OverflowException ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                    number = -1;
+                }
             }
             bool isFibonacci = false;
             if ((number == 0) || (number == 1))
