@@ -39,6 +39,10 @@ namespace Fibonachchi
                     fibonacciNumber[1] = fibonacciNumber[2];
                     fibonacciNumber[2] = fibonacciNumber[0] + fibonacciNumber[1];
                     isFibonacci = (fibonacciNumber[2] == number);
+                    if (isFibonacci)
+                    {
+                        break;
+                    }
                 }
                 if (isFibonacci)
                 {
