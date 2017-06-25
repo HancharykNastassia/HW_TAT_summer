@@ -17,15 +17,14 @@ namespace Sequance
                     Console.WriteLine("Use Space to devide numbers.");
                     Console.WriteLine("Use Enter to finish input.");
                     string[] inputNumbers = Console.ReadLine().Split();
-                    int length = inputNumbers.Length;
-                    int[] sequanceNumbers = new int[length];
-                    for (int i = 0; i < length; i++)
+                    int[] sequanceNumbers = new int[inputNumbers.Length];
+                    for (int i = 0; i < inputNumbers.Length; i++)
                     {
                         sequanceNumbers[i] = int.Parse(inputNumbers[i]);
                     }
                     if (goodInput)
                     {
-                        for (int i = 1; i < length; i++)
+                        for (int i = 1; i < inputNumbers.Length; i++)
                         {
                             if (sequanceNumbers[i] < sequanceNumbers[i-1])
                             {
