@@ -30,9 +30,6 @@ namespace Sequance
                             if (sequanceNumbers[i] < sequanceNumbers[i-1])
                             {
                                 isUndecreaseSequanse = false;
-                            }
-                            if (!isUndecreaseSequanse)
-                            {
                                 Console.WriteLine("The sequance is not undecreasing.");
                                 break;
                             }
