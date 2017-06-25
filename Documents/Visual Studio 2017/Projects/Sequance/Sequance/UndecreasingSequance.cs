@@ -13,9 +13,8 @@ namespace Sequance
                 {
                     goodInput = true;
                     bool isUndecreaseSequanse = true;
-                    Console.WriteLine("Enter a sequance of nubers.");
-                    Console.WriteLine("Use Space to devide numbers.");
-                    Console.WriteLine("Use Enter to finish input.");
+                    Console.WriteLine("Enter a sequance of nubers.\nUse Space to devide numbers.\n" +
+                                      "Use Enter to finish input.");
                     string[] inputNumbers = Console.ReadLine().Split();
                     int[] sequanceNumbers = new int[inputNumbers.Length];
                     for (int i = 0; i < inputNumbers.Length; i++)
