@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonachchi", "..\HW_TAT_su
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "Project1\Project1.csproj", "{7D5FD524-0A72-4F76-A1B4-328B872F446D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequance", "Sequance\Sequance.csproj", "{6C446DC8-23C2-4743-8A58-D1861B0E9297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D5FD524-0A72-4F76-A1B4-328B872F446D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D5FD524-0A72-4F76-A1B4-328B872F446D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D5FD524-0A72-4F76-A1B4-328B872F446D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C446DC8-23C2-4743-8A58-D1861B0E9297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C446DC8-23C2-4743-8A58-D1861B0E9297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C446DC8-23C2-4743-8A58-D1861B0E9297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C446DC8-23C2-4743-8A58-D1861B0E9297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
