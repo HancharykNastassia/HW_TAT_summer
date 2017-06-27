@@ -2,7 +2,7 @@
 
 namespace Sequance
 {
-    class SequanceMain
+    class EntryPoint
     {
         static void Main (string [] args)
         {
