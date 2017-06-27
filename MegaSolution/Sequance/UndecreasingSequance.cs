@@ -1,42 +1,27 @@
 ﻿using System;
 
-namespace Sequance
+namespace Sequence
 {
     class EntryPoint
     {
-        static void Main (string [] args)
+        int[] EnterSequense ()
         {
             bool goodInput = false;
+            string instruction = "Enter a sequance of nubers.\nUse Space to devide numbers.\n" +
+                                 "Use Enter to finish input.";
             while (!goodInput)
-            {
+            {              
+                goodInput = true;
                 try
                 {
-                    goodInput = true;
-                    bool isUndecreaseSequanse = true;
-                    Console.WriteLine("Enter a sequance of nubers.\nUse Space to devide numbers.\n" +
-                                      "Use Enter to finish input.");
+                    Console.WriteLine(instruction);
                     string[] inputNumbers = Console.ReadLine().Split();
                     int[] sequanceNumbers = new int[inputNumbers.Length];
                     for (int i = 0; i < inputNumbers.Length; i++)
                     {
                         sequanceNumbers[i] = int.Parse(inputNumbers[i]);
                     }
-                    if (goodInput)
-                    {
-                        for (int i = 1; i < inputNumbers.Length; i++)
-                        {
-                            if (sequanceNumbers[i] < sequanceNumbers[i-1])
-                            {
-                                isUndecreaseSequanse = false;
-                                Console.WriteLine("The sequance is not undecreasing.");
-                                break;
-                            }
-                        }
-                        if (isUndecreaseSequanse)
-                        {
-                            Console.WriteLine("The sequance is undecreasing.");
-                        }
-                    }
+                    return sequanceNumbers;
                 }
                 catch (System.FormatException ex)
                 {
@@ -54,6 +39,29 @@ namespace Sequance
                     goodInput = false;
                 }
             }
+            return null;
+        }
+        bool isUndecreasing(int[] numbers)
+        {
+            bool isUndecreasingSequence = true;
+            for (int i = 1; i < numbers.Length; i++)
+            {
+                if (numbers[i] < numbers[i - 1])
+                {
+                    isUndecreasingSequence = false;
+                    break;
+                }
+            }
+            return isUndecreasingSequence;
+        }
+        static void Main (string [] args)
+        {
+            EntryPoint entryPoint = new EntryPoint();
+            int[] sequence = entryPoint.EnterSequense();
+            bool isUndecrease = entryPoint.isUndecreasing(sequence);
+            string positiveMessage = "The sequence is undecreasing";
+            string negativeMessage = "The sequence is not undecreasing";
+            Console.WriteLine(isUndecrease ? positiveMessage : negativeMessage);
             Console.WriteLine("Press any key for exit");
             Console.ReadKey();
         }
