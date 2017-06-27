@@ -11,7 +11,6 @@ namespace Sequence
                                  "Use Enter to finish input.";
             while (!goodInput)
             {              
-                goodInput = true;
                 try
                 {
                     Console.WriteLine(instruction);
