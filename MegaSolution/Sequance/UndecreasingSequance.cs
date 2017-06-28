@@ -2,9 +2,9 @@
 
 namespace Sequence
 {
-    class EntryPoint
+    class IsSequenceUndecrease
     {
-        int[] EnterSequense ()
+        public int[] EnterSequense ()
         {
             bool goodInput = false;
             string instruction = "Enter a sequance of nubers.\nUse Space to devide numbers.\n" +
@@ -40,7 +40,7 @@ namespace Sequence
             }
             return null;
         }
-        bool isUndecreasing(int[] numbers)
+        public bool isUndecreasing(int[] numbers)
         {
             bool isUndecreasingSequence = true;
             for (int i = 1; i < numbers.Length; i++)
@@ -52,17 +52,6 @@ namespace Sequence
                 }
             }
             return isUndecreasingSequence;
-        }
-        static void Main (string [] args)
-        {
-            EntryPoint entryPoint = new EntryPoint();
-            int[] sequence = entryPoint.EnterSequense();
-            bool isUndecrease = entryPoint.isUndecreasing(sequence);
-            string positiveMessage = "The sequence is undecreasing";
-            string negativeMessage = "The sequence is not undecreasing";
-            Console.WriteLine(isUndecrease ? positiveMessage : negativeMessage);
-            Console.WriteLine("Press any key for exit");
-            Console.ReadKey();
         }
     }
 }
