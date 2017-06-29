@@ -2,45 +2,38 @@
 
 namespace Sequence
 {
-    class IsSequenceUndecrease
+    class CheckSequence
     {
+        const string INSTRUCTIONS1LINE = "Enter a sequance of nubers. ";
+        const string INSTRUCTIONS2LINE = "Use Space to devide numbers. Use Enter to finish input.";
         public int[] EnterSequense ()
         {
-            bool goodInput = false;
-            string instruction = "Enter a sequance of nubers.\nUse Space to devide numbers.\n" +
-                                 "Use Enter to finish input.";
-            while (!goodInput)
-            {              
+            bool successInput = false;
+            int[] sequanceNumbers = null;
+            while (!successInput)
+            {
+                successInput = true;
+                Console.WriteLine(INSTRUCTIONS1LINE);
+                Console.WriteLine(INSTRUCTIONS2LINE);
+                string[] inputNumbers;
                 try
                 {
-                    Console.WriteLine(instruction);
-                    string[] inputNumbers = Console.ReadLine().Split();
-                    int[] sequanceNumbers = new int[inputNumbers.Length];
+                    inputNumbers = Console.ReadLine().Split();
+                    sequanceNumbers = new int[inputNumbers.Length];
                     for (int i = 0; i < inputNumbers.Length; i++)
                     {
                         sequanceNumbers[i] = int.Parse(inputNumbers[i]);
                     }
-                    return sequanceNumbers;
                 }
-                catch (System.FormatException ex)
+                catch (System.Exception ex)
                 {
                     Console.WriteLine("Error " + ex.Message);
-                    goodInput = false;
-                }
-                catch (System.OverflowException ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                    goodInput = false;
-                }
-                catch (System.ArgumentOutOfRangeException ex)
-                {
-                    Console.WriteLine("Error: " + ex.Message);
-                    goodInput = false;
+                    successInput = false;
                 }
             }
-            return null;
-        }
-        public bool isUndecreasing(int[] numbers)
+            return sequanceNumbers;
+        }         
+        public bool IsUndecreasing(int[] numbers)
         {
             bool isUndecreasingSequence = true;
             for (int i = 1; i < numbers.Length; i++)
