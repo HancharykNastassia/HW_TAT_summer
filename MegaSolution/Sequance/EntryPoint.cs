@@ -3,17 +3,18 @@
 namespace Sequence
 {
     class EntryPoint
-    {        
+    {
         static void Main(string[] args)
         {
-            IsSequenceUndecrease enterSequense = new IsSequenceUndecrease();
+            CheckSequence enterSequense = new CheckSequence();
             int[] sequence;
+            bool isUndecrease = true;
             do
             {
                 sequence = enterSequense.EnterSequense();
+                isUndecrease = enterSequense.IsUndecreasing(sequence);
             }
             while (sequence == null);
-            bool isUndecrease = enterSequense.isUndecreasing(sequence);
             string positiveMessage = "The sequence is undecreasing";
             string negativeMessage = "The sequence is not undecreasing";
             Console.WriteLine(isUndecrease ? positiveMessage : negativeMessage);
