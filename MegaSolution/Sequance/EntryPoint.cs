@@ -12,9 +12,9 @@ namespace Sequence
             do
             {
                 sequence = enterSequense.EnterSequense();
-                isUndecrease = enterSequense.IsUndecreasing(sequence);
             }
             while (sequence == null);
+            isUndecrease = enterSequense.IsUndecreasing(sequence);
             string positiveMessage = "The sequence is undecreasing";
             string negativeMessage = "The sequence is not undecreasing";
             Console.WriteLine(isUndecrease ? positiveMessage : negativeMessage);
