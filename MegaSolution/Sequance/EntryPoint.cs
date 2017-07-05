@@ -18,9 +18,9 @@ namespace Sequence
                 sequence = enterSequence.EnterSequense();
             }
             isUndecrease = checkSequence.IsUndecreasing(sequence);
-            const string positiveMessage = "The sequence is undecreasing";
-            const string negativeMessage = "The sequence is not undecreasing";
-            Console.WriteLine(isUndecrease ? positiveMessage : negativeMessage);
+            const string POSITIVEMESSAGE = "The sequence is undecreasing";
+            const string NEGATIVEMESSAGE = "The sequence is not undecreasing";
+            Console.WriteLine(isUndecrease ? POSITIVEMESSAGE : NEGATIVEMESSAGE);
             Console.WriteLine("Press any key for exit");
             Console.ReadKey();
         }
