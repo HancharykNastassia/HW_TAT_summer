@@ -8,7 +8,6 @@ namespace Sequence
     {
         const string INSTRUCTIONS1LINE = "Enter a sequance of nubers. ";
         const string INSTRUCTIONS2LINE = "Use Space to devide numbers. Use Enter to finish input.";
-        //const string NOTASEQUENCEMESSAGE = "One number is not a sequence. Please enter a sequence.";
         public int[] EnterSequense()
         {
             bool successInput = false;
