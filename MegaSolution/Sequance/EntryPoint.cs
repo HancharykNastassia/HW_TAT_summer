@@ -40,11 +40,6 @@ namespace Sequence
                     Console.WriteLine("ERROR " + ex.Message);
                     enterSequence.SuccessInput = false;
                 }
-                catch (System.NullReferenceException ex)
-                {
-                    Console.WriteLine("ERROR " + ex.Message);
-                    enterSequence.SuccessInput = false;
-                }
             }
             Console.WriteLine("Press any key for exit");
             Console.ReadKey();
