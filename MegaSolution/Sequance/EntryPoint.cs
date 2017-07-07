@@ -20,13 +20,13 @@ namespace Sequence
             {
                 try
                 {
+                    enterSequence.SuccessInput = true;
                     sequence = enterSequence.ParseNubmersOfSequence(enterSequence.EnterSequense());
                     while (sequence.Length < minSequenceLength)
                     {
                         Console.WriteLine(NOTASEQUENCEMESSAGE);
                         sequence = enterSequence.ParseNubmersOfSequence(enterSequence.EnterSequense());
                     }
-                    enterSequence.SuccessInput = true;
                     isUndecrease = checkSequence.IsUndecreasing(sequence);
                     Console.WriteLine(isUndecrease ? POSITIVEMESSAGE : NEGATIVEMESSAGE);
                 }
