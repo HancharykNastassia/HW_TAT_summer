@@ -4,7 +4,7 @@ namespace Sequence
 {
     class CheckSequence
     {
-        public bool IsUndecreasing(int[] numbers)
+        public bool IsUnDecreasing(int[] numbers)
         {
             bool isUndecreasingSequence = true;
             for (int i = 1; i < numbers.Length; i++)

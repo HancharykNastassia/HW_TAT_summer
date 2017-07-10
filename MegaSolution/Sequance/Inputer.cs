@@ -7,6 +7,10 @@ namespace Sequence
         const string INSTRUCTIONS1LINE = "Enter a sequance of nubers. ";
         const string INSTRUCTIONS2LINE = "Use Space to devide numbers. Use Enter to finish input.";
         bool successInput;
+        public SequenceInputer (bool value)
+        {
+            successInput = value;
+        }
         public bool SuccessInput
         {
             get { return successInput; }
