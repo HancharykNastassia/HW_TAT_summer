@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonachchi", "..\HW_TAT_summer\Documents\Visual Studio 2017\Projects\Fibonachchi\Fibonachchi\Fibonachchi.csproj", "{9481220E-A042-4F05-BEAA-BF067EE8821F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonachchi", "Fibonachchi\Fibonachchi.csproj", "{9481220E-A042-4F05-BEAA-BF067EE8821F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project1", "Project1\Project1.csproj", "{7D5FD524-0A72-4F76-A1B4-328B872F446D}"
 EndProject
