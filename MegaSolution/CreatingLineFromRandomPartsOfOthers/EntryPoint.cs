@@ -10,7 +10,6 @@ namespace CreatingLineFromRandomPartsOfOthers
       string[] lines = { String.Empty, String.Empty };
       try
       {
-
         string newLine = new NewLineCreator().CreateNewLine(new Inputter().InputLines(lines));
         Console.WriteLine("First line:");
         Console.WriteLine(lines[0]);
