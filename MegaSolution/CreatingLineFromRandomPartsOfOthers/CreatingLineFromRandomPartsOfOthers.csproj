@@ -51,7 +51,6 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Inputter.cs" />
-    <Compile Include="LineCutter.cs" />
     <Compile Include="NewLineCreation.cs" />
   </ItemGroup>
   <ItemGroup>

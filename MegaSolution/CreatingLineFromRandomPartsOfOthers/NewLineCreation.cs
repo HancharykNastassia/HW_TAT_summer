@@ -12,6 +12,7 @@ namespace CreatingLineFromRandomPartsOfOthers
       length = rand.Next(1, line[1].Length - position);
       char[] lineIn = new char [length];
       Array.Copy(line[1].ToCharArray(), position, lineIn, 0, length);
+      string middlePart = new string(lineIn);
       position = rand.Next(line[0].Length - 1);
       length = rand.Next(1, line[0].Length - position);
       string resultLine = String.Empty;
@@ -19,23 +20,15 @@ namespace CreatingLineFromRandomPartsOfOthers
       {
         char[] beginning = new char [position];
         Array.Copy(line[0].ToCharArray(), beginning, position);
-        foreach (int i in beginning)
-        {
-          resultLine += beginning[i];
-        }
+        string beginSubLine = new string(beginning);
+        resultLine += beginSubLine;
       }
-      foreach (int i in lineIn)
-      {
-        resultLine += lineIn[i];
-      }
+      resultLine += middlePart;
       if (position != (line[0].Length - 1))
       {
         char[] ending = new char[line[0].Length - position - length];
         Array.Copy(line[0].ToCharArray(), position + length, ending, 0, line[0].Length - position - length);
-        foreach (int i in ending)
-        {
-          resultLine += ending[i];
-        }
+        string endSubLine = new string(ending);
       }
       return resultLine;
     }
