@@ -29,6 +29,7 @@ namespace CreatingLineFromRandomPartsOfOthers
         char[] ending = new char[line[0].Length - position - length];
         Array.Copy(line[0].ToCharArray(), position + length, ending, 0, line[0].Length - position - length);
         string endSubLine = new string(ending);
+        resultLine += endSubLine;
       }
       return resultLine;
     }
