@@ -35,7 +35,7 @@ namespace CreatingLineFromRandomPartsOfOthers
           resultLine += ending[i];
         }
       }
-      return resultLine;      
+      return resultLine;
     }
   }
 }

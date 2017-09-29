@@ -4,7 +4,7 @@ namespace CreatingLineFromRandomPartsOfOthers
 {
   class LineCutter
   {
-    public char[] CutLineN1Beginning (string line, int marker)
+    public char[] CutLineN1Beginning(string line, int marker)
     {
       char[] lineOut = new char[marker + 1];
       for (int i = 0; i < marker + 1; i++)
@@ -14,7 +14,7 @@ namespace CreatingLineFromRandomPartsOfOthers
       return lineOut;
     }
 
-    public char[] CutLineN1Ending (string line, int position, int length)
+    public char[] CutLineN1Ending(string line, int position, int length)
     {
       char[] lineOut = new char[line.Length - position - length];
       for (int i = position + length; i < line.Length; i++)
@@ -24,7 +24,7 @@ namespace CreatingLineFromRandomPartsOfOthers
       return lineOut;
     }
 
-    public char[] CutLineN2 (string line, int position, int length)
+    public char[] CutLineN2(string line, int position, int length)
     {
       char[] lineOut = new char[length];
       for (int i = position; i < position + length; i++)
