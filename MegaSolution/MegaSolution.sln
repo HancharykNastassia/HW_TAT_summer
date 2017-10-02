@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequance", "Sequance\Sequan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingLineFromRandomPartsOfOthers", "CreatingLineFromRandomPartsOfOthers\CreatingLineFromRandomPartsOfOthers.csproj", "{0253AD5F-9C15-4235-98B8-3CF9D83A3FE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingArrayFromElementsOfOthers", "CreatingArrayFromElementsOfOthers\CreatingArrayFromElementsOfOthers.csproj", "{BB3563D2-7CE8-4382-B967-3E6C2071563F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0253AD5F-9C15-4235-98B8-3CF9D83A3FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0253AD5F-9C15-4235-98B8-3CF9D83A3FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0253AD5F-9C15-4235-98B8-3CF9D83A3FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
