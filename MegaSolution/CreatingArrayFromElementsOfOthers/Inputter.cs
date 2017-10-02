@@ -23,7 +23,6 @@ namespace CreatingArrayFromElementsOfOthers
         foreach (int j in arrays[i])
         {
           arrays[i][j] = rand.NextDouble() * rand.Next(MAXVALUE);
-          Console.WriteLine(arrays[i][j]);
         }
       }
       return arrays;
