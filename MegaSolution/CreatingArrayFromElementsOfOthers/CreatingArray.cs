@@ -4,9 +4,15 @@ namespace CreatingArrayFromElementsOfOthers
 {
   class CraetingArray
   {
-    // This method gets a list of double arrays and returns one double array
-    // made of elemens from arrays from list which are included not less then
-    // in 2 arrays from list
+    /// <summary>
+    /// Creates new array of elements wich are included in other arrays not less then two times
+    /// </summary>
+    /// <param name="listOfArrays">
+    /// The two-dimensional array which includes arrays for searching in
+    /// </param>
+    /// <returns>
+    /// Array made of elements wich are included in arrays not less then two times
+    /// </returns>
     public double[] CreateArray (double[][] listOfArrays)
     {
       double EPSILON = 1e-9;

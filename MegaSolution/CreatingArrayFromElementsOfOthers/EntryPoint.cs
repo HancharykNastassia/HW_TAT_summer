@@ -5,6 +5,10 @@ namespace CreatingArrayFromElementsOfOthers
   class EntryPoint
   {
     const string FOREXIT = "Press any key for exit";
+    /// <summary>
+    /// The program starts here.
+    /// </summary>
+    /// <param name="args"></param>
     static void Main(string[] args)
     {
       try
