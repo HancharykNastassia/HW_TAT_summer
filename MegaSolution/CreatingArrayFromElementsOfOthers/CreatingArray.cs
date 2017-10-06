@@ -2,7 +2,7 @@
 
 namespace CreatingArrayFromElementsOfOthers
 {
-  class CraetingArray
+  class CreatingArray
   {
     /// <summary>
     /// Creates new array of elements wich are included in other arrays not less then two times

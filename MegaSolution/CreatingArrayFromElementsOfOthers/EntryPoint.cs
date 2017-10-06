@@ -14,7 +14,7 @@ namespace CreatingArrayFromElementsOfOthers
       try
       {
         double[][] doubleArrays = new Inputter().GetArrays();
-        double[] resultDoubleArray = new CraetingArray().CreateArray(doubleArrays);
+        double[] resultDoubleArray = new CreatingArray().CreateArray(doubleArrays);
         Console.WriteLine("Result Array:");
         foreach (int i in resultDoubleArray)
         {
