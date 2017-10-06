@@ -10,7 +10,16 @@ namespace Transliteration
     const string TRANSLITRULESRUEN = @"C:\\Users\\SATELLITE\\HW_TAT_summer\\MegaSolution\\Transliteration\\TranslitRulesRU-EN.txt";
     const string TRANSLITRULESENRU = @"C:\\Users\\SATELLITE\\HW_TAT_summer\\MegaSolution\\Transliteration\\TranslitRulesEN-RU.txt";
     enum codes { RuEn, EnRu};
-    public Dictionary<string, string> FillDictionary (int code)
+    /// <summary>
+    /// This method reads the rules of transliteration from .txt files and creates a dictionary
+    /// </summary>
+    /// <param name="code">
+    /// The number whitch helps to choose file to read
+    /// </param>
+    /// <returns>
+    /// Dictionary to work with
+    /// </returns>
+    public Dictionary<string, string> CreateDictionary (int code)
     {
       Dictionary<string, string> dictionary = new Dictionary<string, string>();
       string fileName = String.Empty;

@@ -12,18 +12,26 @@ namespace Transliteration
     const string FIRSTLINE = "Line after RuEn transliteration: ";
     const string SECONDLINE = "Line after EnRu transliteration: ";
     enum dictionaryCode {RuEnCode, EnRuCode };
+    /// <summary>
+    /// The programm starts here.
+    /// </summary>
+    /// <param name="args"></param>
     static void Main (string[] args)
     {
       try
       {
         
         Dictionary<string, string> RuEnDictionary = new DownloadOfTransliterationRules().
-                                                    FillDictionary((int)dictionaryCode.RuEnCode);
+                                                    CreateDictionary((int)dictionaryCode.RuEnCode);
         Dictionary<string, string> EnRuDictionary = new DownloadOfTransliterationRules().
-                                                    FillDictionary((int)dictionaryCode.EnRuCode);
+                                                    CreateDictionary((int)dictionaryCode.EnRuCode);
         Console.WriteLine(INSTRUCTIONLINE);
         string line = Console.ReadLine();
-        string lineAfterRuEnTransliteration = new Transliterator().Transliterate(line, RuEnDictionary);
+        string lineAfterRuEnTransliteration = String.Empty;
+        foreach (var value in RuEnDictionary.Keys)
+        {
+          line = line.Replace(value, RuEnDictionary[value]);
+        }
         string LineAfterEnRuTransliteration = new Transliterator().
                                                      Transliterate(lineAfterRuEnTransliteration, EnRuDictionary);
         StringBuilder output = new StringBuilder(FIRSTLINE + lineAfterRuEnTransliteration + "\n" +
