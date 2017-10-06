@@ -4,32 +4,38 @@ namespace CreatingLineFromRandomPartsOfOthers
 {
   class NewLineCreator
   {
-    public string CreateNewLine(string[] line)
+    public string CreateNewLine(string[] lines)
     {
-      int position, length;
-      Random rand = new Random();
-      position = rand.Next(line[1].Length - 1);
-      length = rand.Next(1, line[1].Length - position);
-      char[] lineIn = new char [length];
-      Array.Copy(line[1].ToCharArray(), position, lineIn, 0, length);
-      string middlePart = new string(lineIn);
-      position = rand.Next(line[0].Length - 1);
-      length = rand.Next(1, line[0].Length - position);
       string resultLine = String.Empty;
-      if (position != 0)
+      string middlePart = String.Empty;
+      int position, length;
+      if (lines[1].Length > 0)
       {
-        char[] beginning = new char [position];
-        Array.Copy(line[0].ToCharArray(), beginning, position);
-        string beginSubLine = new string(beginning);
-        resultLine += beginSubLine;
+        position = new Random().Next(lines[1].Length - 1);
+        length = new Random().Next(1, lines[1].Length - position);
+        char[] lineIn = new char[length];
+        Array.Copy(lines[1].ToCharArray(), position, lineIn, 0, length);
+        middlePart = new string(lineIn);
       }
-      resultLine += middlePart;
-      if (position != (line[0].Length - 1))
+      if (lines[0].Length > 0)
       {
-        char[] ending = new char[line[0].Length - position - length];
-        Array.Copy(line[0].ToCharArray(), position + length, ending, 0, line[0].Length - position - length);
-        string endSubLine = new string(ending);
-        resultLine += endSubLine;
+        position = new Random().Next(lines[0].Length - 1);
+        length = new Random().Next(1, lines[0].Length - position);
+        if (position != 0)
+        {
+          char[] beginning = new char[position];
+          Array.Copy(lines[0].ToCharArray(), beginning, position);
+          string beginSubLine = new string(beginning);
+          resultLine += beginSubLine;
+        }
+        resultLine += middlePart;
+        if (position != (lines[0].Length - 1))
+        {
+          char[] ending = new char[lines[0].Length - position - length];
+          Array.Copy(lines[0].ToCharArray(), position + length, ending, 0, lines[0].Length - position - length);
+          string endSubLine = new string(ending);
+          resultLine += endSubLine;
+        }
       }
       return resultLine;
     }

@@ -8,8 +8,9 @@ namespace CreatingLineFromRandomPartsOfOthers
     const string SECONDINSTRUCTION = "Enter the second line, please";
     const string ASKFORREINPUT = "Pease, repeat your input";
     bool successInput;
-    public string[] InputLines(string[] lines)
+    public string[] InputLines()
     {
+      string[] lines = { string.Empty, string.Empty };
       successInput = false;
       while (!successInput)
       {

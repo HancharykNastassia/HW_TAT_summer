@@ -7,10 +7,10 @@ namespace CreatingLineFromRandomPartsOfOthers
     const string FOREXIT = "Press any key for exit.";
     static void Main(string[] args)
     {
-      string[] lines = { String.Empty, String.Empty };
       try
       {
-        string newLine = new NewLineCreator().CreateNewLine(new Inputter().InputLines(lines));
+        string[] lines = new Inputter().InputLines();
+        string newLine = new NewLineCreator().CreateNewLine(lines);
         Console.WriteLine("First line:");
         Console.WriteLine(lines[0]);
         Console.WriteLine("Second Line:");
