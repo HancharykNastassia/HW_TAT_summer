@@ -20,7 +20,6 @@ namespace Transliteration
     {
       try
       {
-        
         Dictionary<string, string> RuEnDictionary = new DownloadOfTransliterationRules().
                                                     CreateTransliterationDictionary((int)dictionaryCode.RuEnCode);
         Dictionary<string, string> EnRuDictionary = new DownloadOfTransliterationRules().
