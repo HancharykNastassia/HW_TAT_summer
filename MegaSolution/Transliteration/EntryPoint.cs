@@ -22,16 +22,12 @@ namespace Transliteration
       {
         
         Dictionary<string, string> RuEnDictionary = new DownloadOfTransliterationRules().
-                                                    CreateDictionary((int)dictionaryCode.RuEnCode);
+                                                    CreateTransliterationDictionary((int)dictionaryCode.RuEnCode);
         Dictionary<string, string> EnRuDictionary = new DownloadOfTransliterationRules().
-                                                    CreateDictionary((int)dictionaryCode.EnRuCode);
+                                                    CreateTransliterationDictionary((int)dictionaryCode.EnRuCode);
         Console.WriteLine(INSTRUCTIONLINE);
         string line = Console.ReadLine();
-        string lineAfterRuEnTransliteration = String.Empty;
-        foreach (var value in RuEnDictionary.Keys)
-        {
-          line = line.Replace(value, RuEnDictionary[value]);
-        }
+        string lineAfterRuEnTransliteration = new Transliterator().Transliterate(line, RuEnDictionary);
         string LineAfterEnRuTransliteration = new Transliterator().
                                                      Transliterate(lineAfterRuEnTransliteration, EnRuDictionary);
         StringBuilder output = new StringBuilder(FIRSTLINE + lineAfterRuEnTransliteration + "\n" +
