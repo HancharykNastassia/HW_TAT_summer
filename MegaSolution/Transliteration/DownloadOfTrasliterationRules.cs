@@ -19,7 +19,7 @@ namespace Transliteration
     /// <returns>
     /// Dictionary to work with
     /// </returns>
-    public Dictionary<string, string> CreateDictionary (int code)
+    public Dictionary<string, string> CreateTransliterationDictionary (int code)
     {
       Dictionary<string, string> dictionary = new Dictionary<string, string>();
       string fileName = String.Empty;
