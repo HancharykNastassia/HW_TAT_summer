@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingLineFromRandomParts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreatingArrayFromElementsOfOthers", "CreatingArrayFromElementsOfOthers\CreatingArrayFromElementsOfOthers.csproj", "{BB3563D2-7CE8-4382-B967-3E6C2071563F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transliteration", "Transliteration\Transliteration.csproj", "{34A78545-246F-4A8C-8A8A-EF7D6691A519}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB3563D2-7CE8-4382-B967-3E6C2071563F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34A78545-246F-4A8C-8A8A-EF7D6691A519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34A78545-246F-4A8C-8A8A-EF7D6691A519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34A78545-246F-4A8C-8A8A-EF7D6691A519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34A78545-246F-4A8C-8A8A-EF7D6691A519}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
