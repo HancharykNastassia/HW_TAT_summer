@@ -15,7 +15,7 @@ namespace Transliteration
     /// <returns> Transliterated line</returns>
     public string Transliterate(string line, Dictionary<string, string> dictionary)
     {
-      foreach(var value in dictionary.Keys)
+      foreach (var value in dictionary.Keys)
       {
         line = line.Replace(value, dictionary[value]);
       }

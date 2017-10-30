@@ -11,19 +11,19 @@ namespace Transliteration
     const string INSTRUCTIONLINE = "Enter a line in russian please";
     const string FIRSTLINE = "Line after RuEn transliteration: ";
     const string SECONDLINE = "Line after EnRu transliteration: ";
-    enum dictionaryCode {RuEnCode, EnRuCode };
+
     /// <summary>
     /// The programm starts here.
     /// </summary>
     /// <param name="args"></param>
-    static void Main (string[] args)
+    static void Main(string[] args)
     {
       try
       {
         Dictionary<string, string> RuEnDictionary = new DownloadOfTransliterationRules().
-                                                    CreateTransliterationDictionary((int)dictionaryCode.RuEnCode);
+                                                    CreateTransliterationDictionary(dictionaryCode.RuEnCode);
         Dictionary<string, string> EnRuDictionary = new DownloadOfTransliterationRules().
-                                                    CreateTransliterationDictionary((int)dictionaryCode.EnRuCode);
+                                                    CreateTransliterationDictionary(dictionaryCode.EnRuCode);
         Console.WriteLine(INSTRUCTIONLINE);
         string line = Console.ReadLine();
         string lineAfterRuEnTransliteration = new Transliterator().Transliterate(line, RuEnDictionary);
@@ -31,11 +31,11 @@ namespace Transliteration
                                                      Transliterate(lineAfterRuEnTransliteration, EnRuDictionary);
         StringBuilder output = new StringBuilder(FIRSTLINE + lineAfterRuEnTransliteration + "\n" +
                                                  SECONDLINE + LineAfterEnRuTransliteration);
-        Console.WriteLine(output);        
+        Console.WriteLine(output);
         Console.WriteLine(FOREXIT);
         Console.ReadKey();
       }
-      catch(Exception ex)
+      catch (Exception ex)
       {
         Console.WriteLine(ex.Message);
         Console.WriteLine(FOREXIT);
