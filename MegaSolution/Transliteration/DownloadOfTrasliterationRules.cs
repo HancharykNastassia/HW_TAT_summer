@@ -31,21 +31,19 @@ namespace Transliteration
       {
         fileName = TRANSLITRULESENRU;
       }
-      if (File.Exists(fileName))
-      {
-        StreamReader readThreat = new StreamReader(fileName, Encoding.Default);
-          while (!readThreat.EndOfStream)
+      using (StreamReader readThreat = File.OpenText(fileName))
+      {      
+        while (!readThreat.EndOfStream)
+        {
+          string line = readThreat.ReadLine();
+          if (readThreat.EndOfStream)
           {
-            string line = readThreat.ReadLine();
-            if (readThreat.EndOfStream)
-            {
-              break;
-            }
-            string[] keyValuePair = line.Split('-');
-            dictionary.Add(keyValuePair[0], keyValuePair[1]);
+            break;
           }
-        readThreat.Close();
+          string[] keyValuePair = line.Split('-');
+          dictionary.Add(keyValuePair[0], keyValuePair[1]);
         }
+      }
       return dictionary;
     }
   }
