@@ -67,11 +67,18 @@ namespace TeamFormation
           {
             listOfDevelopers.Remove(developer);
           }
-          else if (sumSalary < amount)
+        }
+        foreach(var developer in listOfDevelopers)
+        { 
+          if (sumSalary < amount)
           {
             sumSalary += developer.Salary;
             sumProductivity += developer.Productivity;
             tempList.Add(developer);
+          }
+          else
+          {
+            break;
           }
         }
         if (sumSalary == amount)
@@ -79,17 +86,14 @@ namespace TeamFormation
           if (sumProductivity > maxProductivity)
           {
             maxProductivity = sumProductivity;
-          }
-          foreach (var developer in tempList)
-          {
             team.Clear();
-            team.Add(developer);
+            foreach (var developer in tempList)
+            {
+              team.Add(developer);
+            }
           }
         }
-        else
-        {
-          tempList.Clear();
-        }
+        tempList.Clear();
       }
     }
   }
