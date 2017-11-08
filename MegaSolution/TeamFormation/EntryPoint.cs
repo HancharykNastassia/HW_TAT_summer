@@ -7,7 +7,7 @@ namespace TeamFormation
 {
   class EntryPoint
   {
-    const string FILENAME = "";
+    const string FILENAME = @"DevelopersList.txt";
     const string FOREXIT = "Press any key for exit";
     static void Main(string[] args)
     {
