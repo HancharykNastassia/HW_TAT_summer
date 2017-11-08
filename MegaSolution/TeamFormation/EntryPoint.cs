@@ -38,7 +38,11 @@ namespace TeamFormation
         Mediator mediator = new Mediator(criteriaNumber, nesessaryAmount, nesessaryProductivity, 
                                          listOfAvailableDevelopers);
         mediator.MakeTeam();
-        List<Developer> team = mediator.Team;
+        List<Developer> team = new List<Developer>();
+        foreach (var developer in mediator.Team)
+        {
+          team.Add(developer);
+        }
         StringBuilder output = new StringBuilder("Team: " + team.Capacity);
       }
       finally

@@ -50,11 +50,46 @@ namespace TeamFormation
       }
       if (checkSumOfSalary == amount)
       {
-        team = listOfDevelopers;
+        foreach (var developer in listOfDevelopers)
+        {
+          team.Add(developer);
+        }
       }
       if (checkSumOfSalary > amount)
       {
-
+        int sumSalary = 0;
+        int sumProductivity = 0;
+        int maxProductivity = 0;
+        List<Developer> tempList = new List<Developer>();
+        foreach (var developer in listOfDevelopers)
+        {
+          if (developer.Salary > amount)
+          {
+            listOfDevelopers.Remove(developer);
+          }
+          else if (sumSalary < amount)
+          {
+            sumSalary += developer.Salary;
+            sumProductivity += developer.Productivity;
+            tempList.Add(developer);
+          }
+        }
+        if (sumSalary == amount)
+        {
+          if (sumProductivity > maxProductivity)
+          {
+            maxProductivity = sumProductivity;
+          }
+          foreach (var developer in tempList)
+          {
+            team.Clear();
+            team.Add(developer);
+          }
+        }
+        else
+        {
+          tempList.Clear();
+        }
       }
     }
   }
