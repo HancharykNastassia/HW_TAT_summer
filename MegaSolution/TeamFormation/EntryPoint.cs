@@ -9,6 +9,13 @@ namespace TeamFormation
   {
     const string FILENAME = @"DevelopersList.txt";
     const string FOREXIT = "Press any key for exit";
+    const string INPUTTHEAMOUNT = "Input the amount of money";
+    const string INPUTTHEPOCDUCTIVITY = "Input nessessary productivity";
+    const string CHOOSECRITERIA = "Choose the criteria";
+    const string JUNIOR = "Junior";
+    const string MIDDLE = "Middle";
+    const string SENIOR = "Senior";
+    const string LEAD = "Lead";
     static void Main(string[] args)
     {
       try
@@ -29,21 +36,44 @@ namespace TeamFormation
             listOfAvailableDevelopers.Add(new Developer(productivity, salary, partOfInputLine[0]));
           }
         }
-        Console.WriteLine("Input the amount of money");
+        Console.WriteLine(INPUTTHEAMOUNT);
         int nesessaryAmount = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("Input nessessary productivity");
+        Console.WriteLine(INPUTTHEPOCDUCTIVITY);
         int nesessaryProductivity = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("Choose the criteria");
+        Console.WriteLine(CHOOSECRITERIA);
         int criteriaNumber = Int32.Parse(Console.ReadLine());
         Mediator mediator = new Mediator(criteriaNumber, nesessaryAmount, nesessaryProductivity, 
                                          listOfAvailableDevelopers);
         mediator.MakeTeam();
         List<Developer> team = new List<Developer>();
+        int quantityOfJuniors = 0;
+        int quantityOfMiddles = 0;
+        int quantityOfSeniors = 0;
+        int quantityOfLeads = 0;
         foreach (var developer in mediator.Team)
         {
           team.Add(developer);
+          if (developer.Vacancy.Equals(JUNIOR))
+          {
+            quantityOfJuniors++;
+          }
+          if (developer.Vacancy.Equals(MIDDLE))
+          {
+            quantityOfMiddles++;
+          }
+          if (developer.Vacancy.Equals(SENIOR))
+          {
+            quantityOfSeniors++;
+          }
+          if (developer.Vacancy.Equals(LEAD))
+          {
+            quantityOfLeads++;
+          }
         }
-        StringBuilder output = new StringBuilder("Team: " + team.Capacity);
+        StringBuilder output = new StringBuilder("Team:\n" + LEAD + ": "+ quantityOfLeads.ToString() + "\n" + 
+                                                             SENIOR + ": " + quantityOfSeniors.ToString() + "\n" +
+                                                             MIDDLE + ": " + quantityOfMiddles.ToString() + "\n" +
+                                                             JUNIOR + ": " + quantityOfJuniors.ToString()); 
       }
       finally
       {
