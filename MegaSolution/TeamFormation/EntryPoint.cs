@@ -73,7 +73,8 @@ namespace TeamFormation
         StringBuilder output = new StringBuilder("Team:\n" + LEAD + ": "+ quantityOfLeads.ToString() + "\n" + 
                                                              SENIOR + ": " + quantityOfSeniors.ToString() + "\n" +
                                                              MIDDLE + ": " + quantityOfMiddles.ToString() + "\n" +
-                                                             JUNIOR + ": " + quantityOfJuniors.ToString()); 
+                                                             JUNIOR + ": " + quantityOfJuniors.ToString());
+        Console.WriteLine(output);
       }
       finally
       {
